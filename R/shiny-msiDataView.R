@@ -40,7 +40,7 @@ msiDataView <- function(input, output, session, dataset) {
 		spectrum_intensity_range = syncVal(NULL),
 		ionimage_contrast = syncVal("none"),
 		ionimage_smoothing = syncVal("none"),
-		ionimage_colorscale = syncVal("rainbow"),
+		ionimage_colorscale = syncVal("blueblack"),
 		ionimage_function = syncVal("mean"),
 		plot_layout = syncVal(50), # 50%, 50%
 		ionimage_height = syncVal(400), # 400px
@@ -114,7 +114,7 @@ msiDataView <- function(input, output, session, dataset) {
 
 	#### Plot output
 
-	output$msiViewer <- renderUI({
+	output$msiDataView <- renderUI({
 		validate(need(sv$plot_layout(), "Invalid plot layout"))
 		validate(need(sv$ionimage_height(), "Invalid plot height"))
 		validate(need(sv$spectrum_height(), "Invalid plot height"))

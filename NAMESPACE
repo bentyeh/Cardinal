@@ -93,6 +93,10 @@ importFrom("utils",
 	"setTxtProgressBar",
 	"txtProgressBar")
 
+import("shiny")
+
+import("shinydashboard")
+
 exportClasses(
 	"Binmat",
 	"Hashmat",
@@ -386,6 +390,8 @@ exportMethods(
 	"standardizeSamples")
 
 exportMethods("coregister")
+
+export("msiView")
 
 exportMethods(
 	"OPLS",
